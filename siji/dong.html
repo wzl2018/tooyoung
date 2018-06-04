@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="../js/main.js" ></script>
+		<meta charset="UTF-8">
+		<title>冬季</title>
+		<style type="text/css">
+			body{
+						width: 1339px;
+			margin: 0 auto;
+			
+			}
+		
+			
+			.chu{
+				width: 100%;
+				margin:0 auto;
+				font-weight: 1000;
+				}
+			.ch{
+				float: left;
+			}
+			
+			.ch img{
+				width:223px;
+			}
+		
+		    figure{
+		    	margin: 0;
+			
+		}
+			.box1text1{
+				position: absolute;
+				left: 432px;
+				top: -1000px;
+				/*background-color: blue;*/
+				transition: all 0.25s ease 0s;
+			}
+			.ch:hover .box1text1{
+				top:511px;								
+			}
+			
+			.box1text3{
+			 	position: absolute;
+			 	left: -1000px;
+			 	top: 511px;
+			 	/*background-color: blue;*/
+				transition: all 0.25s ease 0s;
+			 }
+			.ch:hover .box1text3{
+				left:623px;
+			}
+			.kuang img{
+				width:100%;
+				height:180px;
+			}
+			
+			/*音乐按钮设置CSS*/
+.musicbtn{
+	position:absolute;
+	right:20px;
+	top:20px;
+	width:40px;
+	height:40px;
+	animation:xuanzhuan 2s infinite;
+}
+
+@keyframes xuanzhuan{
+	from{}
+	to{transform:rotate(360deg);
+	 -webkit-transform:rotate(360deg);}
+}
+
+			
+			
+		</style>
+	</head>
+	<body><div class="chu">
+		
+		<figure class="ch ch1">
+		<img src="../img/节气/19立冬/lidong1.png"/>
+		<div class="box1text1">吟行不惮遥，风景尽堪抄。</div>
+		<div class="box1text3">天水清相入，秋冬气始交。</div>
+				</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/20小雪/xiaoxue1.png"/>
+		<div class="box1text1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;疏影横斜水清浅，</div>
+		<div class="box1text3">暗香浮动月黄昏。</div>
+		</figure>
+		<figure class="ch ch3">
+		<img src="../img/节气/21大雪/daxue1.png"/>
+		<div class="box1text1">定定住天涯，依依向物华。</div>
+		<div class="box1text3">寒梅最堪恨，长作去年花。</div>
+		</figure>
+		<figure class="ch ch4">
+		<img src="../img/节气/22冬至/dongzhi1.png" />
+		<div class="box1text1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;冬至阳生春又来，</div>
+		<div class="box1text3">天时人事日相催。</div>
+		</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/23小寒/xiaohan1.png"/>
+		<div class="box1text1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;小寒唯有梅花娇，</div>
+		<div class="box1text3">未见梢头春一枝。</div>
+		</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/24大寒/dahan1.png"/>
+		<div class="box1text1">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;曈曚半弄阴晴日，</div>
+		<div class="box1text3">栗烈初迎小大寒</div>
+		</figure>
+	</div>
+		
+			<div class="kuang">
+		<img src="../img/kuang2.jpg"/>
+		    </div>
+	</div>
+		<!--添加音乐图标-->
+		<img src="../img/musicBtn.png" class="musicbtn" onClick="playPause(this)"/>
+		<audio src="../mp3/天門 - 想い出は遠くの日々.mp3" autoplay="autoplay" id="musicPlayer"></audio>
+	</body>
+</html>

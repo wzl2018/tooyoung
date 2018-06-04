@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="../js/main.js" ></script>
+		<meta charset="UTF-8">
+		<title>春季</title>
+		<style type="text/css">
+			body{
+				width: 1339px;
+			margin: 0 auto;
+			}
+		
+			
+			.chu{
+				width: 100%;
+				margin:0 auto;
+				font-weight: 1000;
+				}
+			.ch{
+				float: left;
+			}
+			
+			.ch img{
+				width:223px;
+			}
+		
+		    figure{
+		    	margin: 0;
+			
+		}
+			.box1text1{
+				position: absolute;
+				left: 424px;
+				top: -1000px;
+				/*background-color: blue;*/
+				transition: all 0.25s ease 0s;
+			}
+			.ch:hover .box1text1{
+				top:425px;								
+			}
+	
+			.box1text3{
+			 	position: absolute;
+			 	left: -1000px;
+			 	top: 425px;
+			 	/*background-color: blue;*/
+				transition: all 0.25s ease 0s;
+			 }
+			.ch:hover .box1text3{
+				left:700px;
+			}
+			.kuang img{
+				width:100%;
+			}
+			
+			/*音乐按钮设置CSS*/
+.musicbtn{
+	position:absolute;
+	right:20px;
+	top:20px;
+	width:40px;
+	height:40px;
+	animation:xuanzhuan 2s infinite;
+}
+
+@keyframes xuanzhuan{
+	from{}
+	to{transform:rotate(360deg);
+	 -webkit-transform:rotate(360deg);}
+}
+
+			
+			
+		</style>
+	</head>
+	<body><div class="chu">
+		
+		<figure class="ch ch1">
+		<img src="../img/节气/1立春/lichun.gif" />
+		<div class="box1text1">东风带雨逐西风，大地阳和暖气生。</div>
+	<!--	<div class="box1text2">qqqqqqqqq</div>-->
+		<div class="box1text3">万物苏萌山水醒，农家岁首又谋耕。</div>
+				</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/2雨水/yushui.gif" />
+		<div class="box1text1">南湿北冷两交锋，乍暖还寒斗雨风。</div>
+		<div class="box1text3">一夜返青千里麦，万山润遍动无声。</div>
+		</figure>
+		<figure class="ch ch3">
+		<img src="../img/节气/3惊蛰/jingzhe.gif"/>
+		<div class="box1text1">&nbsp&nbsp&nbsp&nbsp二月节……万物出乎震，震为雷，</div>
+		<div class="box1text3">故曰惊蛰，是蛰虫惊而出走矣。</div>
+		</figure>
+		<figure class="ch ch4">
+		<img src="../img/节气/4春分/chunfen.gif" />
+		<div class="box1text1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp春分者，阴阳相半也，</div>
+		<div class="box1text3">故昼夜均而寒暑平。</div>
+		</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/5清明/qingming.gif" />
+		<div class="box1text1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp万物生长此时，皆清洁而明净。</div>
+		<div class="box1text3">故谓之清明。</div>
+		</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/6谷雨/guyu.gif" />
+		<div class="box1text1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp雨读作去声，如雨我公田之雨。</div>
+		<div class="box1text3">盖谷以此时播种，自上而下也。</div>
+		</figure>
+	</div>
+		
+			<div class="kuang">
+		<img src="../img/2.png"/>
+		    </div>
+	</div>
+		<!--添加音乐图标-->
+		<img src="../img/musicBtn.png" class="musicbtn" onClick="playPause(this)"/>
+		<audio src="../mp3/吉森信 - 春を知らせるもの~続 夏目友人帳のテーマ.mp3" autoplay="autoplay" id="musicPlayer"></audio>
+	</body>
+</html>

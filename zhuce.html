@@ -1,0 +1,153 @@
+
+
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link href="css/regist.css" rel="stylesheet" type="text/css">
+<title>注册页面</title>
+<script type="text/javascript">
+var reg=/^[a-zA-Z]\w*$/;
+var flag1=false,flag2=false,flag3=false;
+function chang1(obj){
+	var name=obj.value;
+	if(name.length<3||name.length>8){
+		//alert("密码要求3-8位！");
+		document.getElementById("usName").innerHTML="<font color='red'> 用户名要求3-8位！</font>";
+	}
+	else if(!reg.test(name)){
+		//alert("用户名由字母开头，后字母、数字或下划线!");
+		document.getElementById("usName").innerHTML="<font color='red'> 用户名由字母开头，后字母、数字或下划线</font>";
+		flag1=false;
+	}
+	else{
+		flag1=true;
+		document.getElementById("usName").innerHTML="<font color='green'>可以使用</font>";
+	}
+}
+function chang2(obj){
+	var pwd=obj.value;
+	if(pwd.length<6||pwd.length>8){
+		//alert("密码要求3-8位！");
+		document.getElementById("ps1").innerHTML="<font color='red'>密码要求3-8位！</font>";
+	flag2=false;
+	}
+	else{
+		document.getElementById("ps1").innerHTML="<font color='green'>可以使用</font>";
+		flag2=true;
+	}
+}
+function chang3(obj){
+	var pwd1=obj.value;
+	var pwd=document.regist.password.value;
+	if(pwd1.length<6||pwd1.length>8){
+		//alert("密码要求3-8位！");
+		document.getElementById("ps2").innerHTML="<font color='red'>密码要求3-8位！</font>";
+	}
+	else if(pwd!=pwd1){
+		//alert("两次输入密码不一致！");
+		document.getElementById("ps2").innerHTML="<font color='red'>两次输入密码不一致！</font>";
+	flag3=false;
+	}
+	else{
+		document.getElementById("ps2").innerHTML="<font color='green'>可以使用</font>";
+		flag3=true;
+	}
+}
+function sub(){
+	if(flag1&&flag2&&flag3){
+		document.regist.submit();
+	}
+	else{
+		alert("请填写注册信息");
+	}
+}
+function res(){
+	document.regist.username.value="";
+	document.regist.password.value="";
+	document.regist.passwordAgain.value="";
+	document.getElementById("usName").innerHTML="";
+	document.getElementById("ps1").innerHTML="";
+	document.getElementById("ps2").innerHTML="";
+}
+</script>
+
+<style type="text/css">
+	body{
+		background:url(img/logo.png)
+	}
+	.zc{
+		background-color:#999999;
+		width: 500px;
+		border: 5px;
+		border-color: #2D2D3F;
+		opacity:0.9;
+	}
+	.login_button{
+		float: left;
+	}
+	img{
+		position: absolute;
+		top: 100px;
+		left: 638px;
+	}
+</style>
+
+</head>
+<body>
+	<center>
+	<div class="zc"><img src="img/logo.png" />
+<form method="POST" name="regist" action="RegistJsp.jsp">
+<table style="height:100%; width: 100%">
+	<tr align="center" valign="middle">
+		<td>
+		<TABLE width="392" height="200" border=0 align="center" cellPadding=0
+			cellSpacing=0
+			style="background-image: url(./images/login_Page/logPage.jpg); height: 200; width: 392">
+			<TBODY>
+				<TR valign="middle" align="center">
+					<TD colSpan=3 height=40 valign="middle" align="center"><font
+						face="黑体" size="4px" color="#510301"
+						style="padding-left: 20px; vertical-align: middle">用户注册</font></TD>
+				</TR>
+				<TR>
+					<td width="80" height="20" class="">   用户名：</td>
+					<td width="100" height="20" class="login_td"><input
+						type="text" name="username" value="" style="WIDTH: 110px"
+						onChange="chang1(this)"></td>
+					<td id="usName"></td>
+				</tr>
+				<tr>
+					<td height="20" class="">   密 码：</td>
+					<td height="20" class="login_td"><input type="password"
+						name="password" value="" style="WIDTH: 110px"
+						onChange="chang2(this)"></td>
+					<td id="ps1"></td>
+				</tr>
+				<tr>
+					<td height="20" class="">   确认密码：</td>
+					<td height="20" class="login_td"><input type="password"
+						name="passwordAgain" value="" style="WIDTH: 110px"
+						onChange="chang3(this)"></td>
+					<td id="ps2"></td>
+				</tr>
+				<tr>
+					<td height="20" colspan="2" align="center">                    
+					<button class="login_button" onClick=res();>重置</button>
+					 
+					<button class="login_button" onClick=sub();>提交</button>
+					 </td>
+					<td class="login_td" align="left" width=81><a href="index.html">返回</a></td>
+
+				</TR>
+			</TBODY>
+		</TABLE>
+		</td>
+	</tr>
+</table>
+        </form></div></center>
+        
+       
+		
+</body>
+</html>
+

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="../js/main.js" ></script>
+		<meta charset="UTF-8">
+		<title>秋季</title>
+		<style type="text/css">
+			body{
+				width: 1339px;
+			margin: 0 auto;
+			background-image:url(../img/beijing.jpg); 
+			 background-repeat:no-repeat;
+    background-position:center;
+		 background-size: 100% 1000px; 
+			opacity:0.8;
+			}
+		
+			
+			.chu{
+				width: 100%;
+				margin:0 auto;
+				font-weight: 1000;
+				/*opacity:1;*/
+
+				}
+			.ch{
+				float: left;
+			}
+			
+			.ch img{
+				width:223px;
+			}
+		
+		    figure{
+		    	margin: 0;
+			
+		}
+			.box1text1{
+				position: absolute;
+				opacity:0;
+				left: 424px;
+				top:425px;	
+				/*left: 358px;
+				top: -1000px;
+				*/
+				/*background-color: blue;*/
+				transition: all 1s ease 0.5s;
+			}
+			.ch:hover .box1text1{
+				opacity:1;							
+			}
+			
+			.box1text3{
+			 	position: absolute;
+			 	opacity:0;
+			 	left:700px;
+			 	top: 425px;
+		
+				transition: all 1s ease 0.5s;
+			 }
+			.ch:hover .box1text3{
+				opacity:1;		
+			}
+			.kuang img{
+				width:100%;
+			}
+			.top img{
+				width:100%;
+			}
+			
+			/*音乐按钮设置CSS*/
+.musicbtn{
+	position:absolute;
+	right:20px;
+	top:20px;
+	width:40px;
+	height:40px;
+	animation:xuanzhuan 2s infinite;
+}
+
+@keyframes xuanzhuan{
+	from{}
+	to{transform:rotate(360deg);
+	 -webkit-transform:rotate(360deg);}
+}
+
+			
+			
+		</style>
+	</head>
+	<body><div class="chu">
+		
+		<figure class="ch ch1">
+		<img src="../img/节气/13立秋/liqiu.gif" />
+		<div class="box1text1">一叶梧桐一报秋，稻花田里话丰收。</div>
+		<div class="box1text3">虽非盛夏还伏虎，更有寒蝉唱不休。</div>
+				</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/14处暑/chushu.gif" />
+		<div class="box1text1">一度暑出处暑时，秋风送爽已觉迟。</div>
+		<div class="box1text3">日行南径斜晖里，割稻陌阡车马驰。</div>
+		</figure>
+		<figure class="ch ch3">
+		<img src="../img/节气/15白露/bailu.gif"/>
+		<div class="box1text1">衰荷滚玉闪晶光，一夜西风一夜凉。</div>
+		<div class="box1text3">雁阵声声蚊欲静，枣红点点桂流香。</div>
+		</figure>
+		<figure class="ch ch4">
+		<img src="../img/节气/16秋分/qiufen.gif" />
+		<div class="box1text1">暑退秋澄气转凉，日光夜色两均长。</div>
+		<div class="box1text3">银棉金稻 千重秀，丹桂小菊万径香。</div>
+		</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/17寒露/hanlu.gif"/>
+		<div class="box1text1">天高昼暖夜来凉，草木萧疏梧落黄。</div>
+		<div class="box1text3">日享菊香播小麦，夜尝梨贝养脾肠。</div>
+		</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/18霜降/shuangjiang.gif" />
+		<div class="box1text1">一朝秋暮露成霜，几份凝结几份阳。</div>
+		<div class="box1text3">荷败千池萧瑟岸，棉白万顷采收忙。</div>
+		</figure>
+	</div>
+		
+			<!--<div class="kuang">
+		<img src="../img/2.png"/>
+		    </div>-->
+		    <!--<div class="top">
+		    	<img src="../img/fengye1.png"/>
+		    </div>-->
+	</div>
+		<!--添加音乐图标-->
+		<img src="../img/musicBtn.png" class="musicbtn" onClick="playPause(this)"/>
+		<audio src="../mp3/闫东炜 - 简单与秋夜.mp3" autoplay="autoplay" id="musicPlayer"></audio>
+	</body>
+</html>

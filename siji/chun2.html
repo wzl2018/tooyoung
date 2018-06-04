@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="../js/jquery-3.3.1.min.js"></script>		
+		<script type="text/javascript" src="../js/zturn.js"></script>		
+		<link href="../css/pic2.css" rel="stylesheet" type="text/css" />	
+		<script type="text/javascript" src="../js/main.js" ></script>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			
+			
+			/*音乐按钮设置CSS*/
+.musicbtn{
+	position:absolute;
+	right:20px;
+	top:20px;
+	width:40px;
+	height:40px;
+	animation:xuanzhuan 2s infinite;
+}
+
+@keyframes xuanzhuan{
+	from{}
+	to{transform:rotate(360deg);
+	 -webkit-transform:rotate(360deg);}
+}
+/*诗句特效*/
+.box1text1{
+				position: absolute;
+				left: 358px;
+				top: -1000px;
+				/*background-color: blue;*/
+				transition: all 0.25s ease 0s;
+			}
+			.h2:hover .box1text1{
+				top:388px;								
+			}
+			.box1text3{
+			 	position: absolute;
+			 	left: -1000px;
+			 	top: 388px;
+			 	/*background-color: blue;*/
+				transition: all 0.25s ease 0s;
+			 }
+			.picORtext:hover .box1text3{
+				left:623px;
+			}
+.kuang img{
+				width:100%;
+			}
+
+		</style>
+		
+		
+	</head>
+	<body>
+			<!--轮播条2-->
+			<div class="picORtext">
+				<div class="bigBox">
+					<div class="box1">
+						<ul id="zturn2" class="poster-list">
+							<li class="poster-item zturn-item">
+								<div class="for_btn"><img class="picORtextpic" src="../img/1.gif" width="100%">
+								
+								</div>
+							</li>
+							<li class="poster-item  zturn-item">
+								<div class="for_btn h2"><img class="picORtextpic" src="../img/节气/1立春/lichun.gif">
+								<div class="box1text1">东风带雨逐西风，大地阳和暖气生。</div>
+		                          <div class="box1text3">万物苏萌山水醒，农家岁首又谋耕。</div>
+								</div>
+							</li>
+							<li class="poster-item zturn-item">
+								<div class="for_btn"><img class="picORtextpic" src="../img/节气/2雨水/yushui.gif" width="100%"></div>
+							</li>
+							<li class="poster-item zturn-item">
+								<div class="for_btn"><img class="picORtextpic" src="../img/节气/3惊蛰/jingzhe.gif" width="100%"></div>
+							</li>
+							<li class="poster-item zturn-item">
+								<div class="for_btn"><img class="picORtextpic" src="../img/节气/4春分/chunfen.gif" width="100%"></div>
+							</li>
+							<li class="poster-item zturn-item">
+								<div class="for_btn"><img class="picORtextpic" src="../img/节气/5清明/qingming.gif" width="100%"></div>
+							</li>
+							<li class="poster-item zturn-item">
+								<div class="for_btn"><img class="picORtextpic" src="../img/节气/6谷雨/guyu.gif" width="100%"></div>
+							</li>
+							
+							
+						</ul>
+					</div>
+				</div>
+			</div>
+			
+			
+		
+			<div class="kuang">
+		<img src="../img/2.png"/>		
+		    </div>
+		
+			
+			</body>
+			
+			
+			
+			
+			<script type="text/javascript">
+
+			var ab = new zturn({
+				id: "zturn2",
+				opacity: 0.8,
+				width: 382,
+				Awidth: 1024,
+				scale: 0.6
+			})
+		</script>
+		<!--添加音乐图标-->
+		<img src="../img/musicBtn.png" class="musicbtn" onClick="playPause(this)"/>
+		<audio src="../mp3/吉森信 - 春を知らせるもの~続 夏目友人帳のテーマ.mp3" autoplay="autoplay" id="musicPlayer"></audio>
+	</body>
+</html>
+		
+</html>
+

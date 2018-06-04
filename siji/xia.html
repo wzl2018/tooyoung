@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script type="text/javascript" src="../js/main.js" ></script>
+		<meta charset="UTF-8">
+		<title>夏季</title>
+		<style type="text/css">
+			body{
+				width: 1339px;
+			margin: 0 auto;
+			background-color: #ADD8E6;
+			}
+		
+			
+			.chu{
+				width: 100%;
+				margin:0 auto;
+				font-weight: 1000;
+				}
+			.ch{
+				float: left;
+			}
+			
+			.ch img{
+				width:223px;
+			}
+		
+		    figure{
+		    	margin: 0;
+			
+		}
+			.box1text1{
+				position: absolute;
+				left: 424px;
+				top: -1000px;
+				/*background-color: blue;*/
+				transition: all 1s ease 0s;
+			}
+			.ch:hover .box1text1{
+				top:425px;	
+				-webkit-transform:rotate(360deg);							
+			}
+		
+			.box1text3{
+			 	position: absolute;
+			 	left: -1000px;
+			 	top: 425px;
+			 	/*background-color: blue;*/
+				transition: all 0.8s ease 0s;
+			 }
+			.ch:hover .box1text3{
+				left:700px;
+			}
+		 .img1 img{
+				position: absolute;
+				width:100px;
+				left: 10px;
+				top: 435px;
+			}
+			 .img2 img{
+				position: absolute;
+				width:100px;
+				left: 130px;
+				top:536px;
+			}
+			 .img3 img{
+				position: absolute;
+				width:100px;
+				left:1100px;
+				top:460px;
+			}
+			.img4 img{
+				position: absolute;
+				width:100px;
+				height:334px;
+				left:1200px;
+				top:338px;
+			}
+			
+			/*音乐按钮设置CSS*/
+.musicbtn{
+	position:absolute;
+	right:20px;
+	top:20px;
+	width:40px;
+	height:40px;
+	animation:xuanzhuan 2s infinite;
+}
+
+@keyframes xuanzhuan{
+	from{}
+	to{transform:rotate(360deg);
+	 -webkit-transform:rotate(360deg);}
+}
+
+			
+			
+		</style>
+	</head>
+	<body><div class="chu">
+		
+		<figure class="ch ch1">
+		<img src="../img/节气/7立夏/lixia.gif" />
+		<div class="box1text1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp孟夏之日，天地</div>
+	
+		<div class="box1text3">始交，万物并秀。</div>
+				</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/8小满/xiaoman.gif"/>
+		<div class="box1text1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp四月中，小满者，</div>
+		<div class="box1text3">物致于此小得盈满。</div>
+		</figure>
+		<figure class="ch ch3">
+		<img src="../img/节气/9芒种/mangzhong.gif"/>
+		<div class="box1text1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp芒种芒种，</div>
+		<div class="box1text3">连收带种。</div>
+		</figure>
+		<figure class="ch ch4">
+		<img src="../img/节气/10夏至/xiazhi.gif"/>
+		<div class="box1text1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp一候鹿角解；二候蝉</div>
+		<div class="box1text3">始鸣；三候半夏生。</div>
+		</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/11小暑/xiaoshu.gif"/>
+		<div class="box1text1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp竹喧先觉雨，山暗已闻雷。</div>
+		<div class="box1text3">鹰鹯新习学，蟋蟀莫相催。</div>
+		</figure>
+		<figure class="ch ch2">
+		<img src="../img/节气/12大暑/dashu.gif"/>
+		<div class="box1text1">&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp腐草为萤。土润</div>
+		<div class="box1text3">溽暑。大雨时行。</div>
+		</figure>
+	</div>
+		
+		
+	</div>
+		<div class="kuang">
+		<!--<img src="../img/he.png"/>-->
+		<div class="img1">
+		<img src="../img/heye.png"/></div>
+		<div class="img2">
+		<img src="../img/hehua.png"/></div>
+			<div class="img3">
+		<img src="../img/lianou.png"/></div>
+		    </div>
+		    <div class="img4">
+		<img src="../img/heye2.png"/></div>
+		    </div>
+		<!--添加音乐图标-->
+		<img src="../img/musicBtn.png" class="musicbtn" onClick="playPause(this)"/>
+		<audio src="../mp3/吉森信 - めぐる夏の便り.mp3" autoplay="autoplay" id="musicPlayer"></audio>
+	</body>
+</html>

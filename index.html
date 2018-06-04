@@ -1,0 +1,364 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link  href="img/logo.ico" rel="icon" type="imge/x-icon"/>
+
+<title>图样图新魄</title>
+<link rel="stylesheet" href="css/wenzi.css" type="text/css">
+
+  <style>
+
+  	body,div{
+  		margin: 0;
+  		padding: 0;
+  		
+  	}
+  a{
+		text-decoration:none;
+	}
+    body{
+    			width: 1339px;
+			margin: 0 auto;
+      background:#ADD8E6;
+    }
+
+    .gallery{
+    
+      list-style: none;
+      margin: 50px auto; padding: 0;
+      width: 80%; /* (200+10+4)x3 */
+      font-size: 0; /* fix inline-block spacing */
+    }
+
+    .gallery li{
+        display: inline-block;
+        *display: inline;
+        zoom: 1;
+        width: 450px; height:300px;
+        margin: 2px;
+        border: 10px solid #fff;
+        -moz-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+        -webkit-box-shadow: 0 2px 2px rgba(0,0,0,.1);
+        box-shadow: 0 2px 2px rgba(0,0,0,.1);
+        -webkit-transition: all .3s ease;
+        -moz-transition: all .3s ease;
+        -ms-transition: all .3s ease;
+        -o-transition: all .3s ease;
+        transition: all .3s ease;        
+    }
+img{
+	width: 100%;
+	height: 100%;
+}
+    .gallery:hover li:not(:hover){       
+        -webkit-filter: blur(2px) grayscale(1);
+        -moz-filter: blur(2px) grayscale(1);
+        -o-filter: blur(2px) grayscale(1);
+        -ms-filter: blur(2px) grayscale(1);
+        filter: blur(2px) grayscale(1);
+        opacity: .7; /* fallback */        
+    }
+
+    /* Demo page only */
+    #about{
+        color: #999;
+        text-align: center;
+        font: 0.9em Arial, Helvetica;
+    }
+
+    #about a{
+        color: #777;
+    } 
+    #dl {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: block;
+  text-decoration: none;
+
+}
+
+#demo3{
+	left:800px;
+	  position: absolute;
+	  top: 0px;
+}
+#demo3 ul{
+	list-style: none;
+}
+ #demo3 ul li{
+    float:left;
+    margin:0 25px;
+    position:relative;
+}
+#demo3 ul li a{
+    font: "微软雅黑";
+    font-size: 20px;
+    color:#D8761E;
+    font-family:'Righteous', cursive;
+    display:block;
+    padding:10px 0;
+}
+#demo3 ul li span{
+    display:block;
+}
+#demo3 ul li a:before{
+    content:"";
+    position:absolute;
+    width:100%;
+    height:3px;
+    background:#D8761E;
+    bottom:0;
+    opacity:0;
+    -webkit-transform: translate3d(0, -40px, 0);
+    transform: translate3d(0, -40px, 0);
+    -webkit-transition: -webkit-transform 0s 0.3s, opacity 0.2s;
+    transition: transform 0s 0.3s, opacity 0.2s;
+}
+#demo3 ul li a:hover::before{
+    opacity:1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+    -webkit-transition: -webkit-transform 0.5s, opacity 0.1s;
+    transition: transform 0.5s, opacity 0.1s;
+    -webkit-transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1); 
+}
+#demo3 ul li a:hover span{
+    color:#510301;
+    -webkit-animation: anim-francisco 0.3s forwards;
+    animation: anim-francisco 0.3s forwards;
+}
+@-webkit-keyframes anim-francisco {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes anim-francisco {
+    50% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, 100%, 0);
+        transform: translate3d(0, 100%, 0);
+    }
+
+    51% {
+        opacity: 0;
+        -webkit-transform: translate3d(0, -100%, 0);
+        transform: translate3d(0, -100%, 0);
+    }
+
+    100% {
+        opacity: 1;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+
+.gg{
+	width: 600px;
+}
+.pb{
+	width: 80px;
+	 position: absolute;
+  left: 30px;
+  top: 100px;
+}
+.ss{
+	width:200px;
+	 position: absolute;
+  left: 0px;
+  top: 60px;
+}
+.bq{
+	width: 500px;
+	 position: absolute;
+  left:0px;
+  top:70px;
+}
+.timeblock{
+	background: #000 url(img/shuiyin.jpg) no-repeat;
+	 background-size: cover;
+}
+.time{
+	filter:alpha(opacity=75);
+
+        opacity:0.9;
+}
+
+.foot{
+	position: relative;
+	width: 100%;
+}
+.foot .foot1{
+	position:absolute;
+	top:12px;
+	left:2%;
+	width:68px;
+}
+.foot .foot12 {
+	width:2%;
+	position:absolute;
+	top:6px;
+	left:7%;
+}
+.foot .foot2{
+	position: absolute;
+	margin-left:525PX;
+top:7px;
+}
+.foot ul li{
+	list-style:none;
+		float: left;
+}
+.foot12:hover img{
+	width:400%;
+
+}
+.hehua{
+	position: absolute;
+	top:528px;
+	width:275px;
+	left:1137px;
+}
+.logo{
+	position: fixed;
+	left: 1290px;
+	top:0px;
+	z-index: 99;
+}
+  </style>
+</head>
+
+<body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+	
+	<div class="logo">
+		<a href="#demo3"><img src="img/logo.png" /></a>
+	</div>
+	
+	<div class="gg">
+		<img src="img/1 (2).png" />
+		
+	</div>
+	<div id="demo3">
+        <ul>
+        	 <li><a href="#" style="text-decoration:underline;"><span>首页</span></a></li>
+            <li><a href="http://huaban.com/"><span>花瓣</span></a></li>
+            <li><a href="zhuce.html"><span>注册</span></a></li>
+            <li><a href="denglu1.html"><span>登陆</span></a></li>
+           
+        </ul>
+    </div>
+	
+	
+
+
+	<div class="ss">		
+		<img src="img/5.png" />
+	</div>
+	  
+	<div class="pb">
+		<img src="img/4.png" />
+	</div>
+<center>
+  <ul class="gallery">
+  
+      <li><a href="siji/chun.html"><img src="img/chun2.jpg"/></a></li>
+      <li><a href="siji/xia.html"><img src="img/xia.jpg"/></a></li>
+      <li><a href="siji/qiu.html"><img src="img/qiu2.jpg"/></a></li>
+      <li><a href="siji/dong.html"><img src="img/dong2.jpg"/></a></li>    
+  </ul>
+  </center>
+<div class="hehua">
+  	<img src="img/he.png" />
+  </div>
+  <!--<div class="bq">
+  	<img src="img/bq.png" />
+  </div>-->
+  <div class="timeblock">
+  <div class="time" style="">
+  	<img src="img/timg.jpg"/>
+  </div>
+  </div>
+  <center>
+  <table id="__01" width="1024" height="1780" border="0" cellpadding="0" cellspacing="0">
+	<tr>
+		<td colspan="2">
+			<a href="siji/chun.html">
+				<img src="img/yz_01.jpg" width="1024" height="298" border="0" alt=""></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="siji/chun.html">
+				<img src="img/yz_02.jpg" width="514" height="314" border="0" alt=""></a></td>
+		<td>
+			<a href="siji/xia.html">
+				<img src="img/yz_03.jpg" width="510" height="314" border="0" alt=""></a></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<a href="siji/xia.html">
+			
+				<img src="img/yz_04.jpg"  width="1024" height="276" border="0" alt=""></a></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<a href="siji/qiu.html">
+				<img src="img/yz_05.jpg" width="1024" height="268" border="0" alt=""></a></td>
+	</tr>
+	<tr>
+		<td>
+			<a href="siji/qiu.html">
+				<img src="img/yz_06.jpg" width="514" height="313" border="0" alt=""></a></td>
+		<td>
+			<a href="siji/dong.html">
+				<img src="img/yz_07.jpg" width="510" height="313" border="0" alt=""></a></td>
+	</tr>
+	<tr>
+		<td colspan="2">
+			<a href="siji/dong.html">
+				<img src="img/yz_08.jpg" width="1024" height="311" border="0" alt=""></a></td>
+	</tr>
+</table>
+  </center>
+  <div class="foot">
+  	<img src="img/dbt.jpg" />
+  	<div class="foot1">联系我们</div>
+  	<div class="foot12">
+  	<img src="img/ewm.jpg" /> 		
+  	</div>
+  	
+  	<div class="foot2">
+  		<ul>
+  		<li><a href="#">新手入门I</a></li>
+  		<li><a href="https://hanyu.baidu.com/zici/s?wd=%E6%88%91%E4%BB%AC&query=%E6%88%91%E4%BB%AC%E6%98%AF%E4%BB%80%E4%B9%88%E6%84%8F%E6%80%9D&srcid=28236&from=kg0&from=kg0">关于我们I</a></li>
+  		<li><a href="#">法律信息</a></li></ul>
+  	</div>
+  	<center>
+  	©2018 wangzl. All rights reserved.</center>
+  </div>
+
+  
+<div style="text-align:center;clear:both;">
+<script src="/gg_bd_ad_720x90.js" type="text/javascript"></script>
+<script src="/follow.js" type="text/javascript"></script>
+</div>
+
+</body>
+</html>

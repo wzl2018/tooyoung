@@ -1,0 +1,49 @@
+
+
+
+
+
+<body><html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>2秒后跳转</title>
+<style type="text/css">
+#test{height: 100%;width: 100%;position: relative;background-color: lightblue;}
+#test:before{content:'欢迎登陆';position: absolute;width: 10px;background:url(img/zhuye.png) no-repeat;}
+#test:hover:before{width:100%;height: 100%; transition: width 1.8s 0s;}	
+	#test{
+		top:0px;
+	}
+</style>
+</head>
+	<div id="test"></div>
+
+
+<input type="text" readonly="true" value="1" id="time">
+</body>
+<script language="javascript">
+var t = 2;
+var time = document.getElementById("time");
+function fun(){
+t--;
+time.value = t;
+if(t<=0){
+location.href ="index.html";
+clearInterval(inter);
+}
+}
+var inter = setInterval("fun()",1000);
+
+test.addEventListener("transitionend", myFunction);
+function myFunction(e){
+    console.log(event)
+    e = e || event;
+    test.innerHTML = 'propertyName:' + e.propertyName + '; elapsedTime:' + e.elapsedTime + '; pseudoElement:' + e.pseudoElement;
+}
+
+</script>
+
+
+
+
+</html>
